@@ -8,9 +8,33 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background: #00122b; /* tmavší modrá */
+      background: #00122b;
+      /* tmavší modrá */
       font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
     }
+
+    .header-bar {
+      width: 100vw;
+      background: #00101a;
+      /* o trochu tmavší modrá než pozadí */
+      padding: 22px 0 18px 0;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 12px #0003;
+    }
+
+    .header-title {
+      color: #fff;
+      font-size: 2.2rem;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+      text-align: center;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    .container {
+      margin-top: 30px;
+    }
+
     canvas {
       position: fixed;
       top: 50%;
@@ -31,6 +55,10 @@
 
 <body class="d-flex justify-content-center align-items-start py-5" style="background-color: #00122b;">
 
+  <div class="header-bar">
+    <h1 class="header-title">Pet Food Store</h1>
+  </div>
+
   <div class="container" style="max-width: 600px;">
     <h1 class="text-center mb-4">Product list</h1>
     <div id="products" class="mb-4 border border-success p-3 rounded bg-light shadow-sm"></div>
@@ -50,7 +78,7 @@
     </div>
   </div>
 
- 
+
   <script src="app.js"></script>
 </body>
 
