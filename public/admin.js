@@ -192,7 +192,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const savedLoginTime = localStorage.getItem('adminLoginTime');
   const now = Date.now();
 
-  if (savedLoginTime && now - savedLoginTime < 30000) {
+  if (savedLoginTime && now - savedLoginTime < 1000000) {
     loggedIn = true;
     document.getElementById('adminPanel').style.display = 'block';
     loadOrders();
@@ -250,10 +250,10 @@ window.addEventListener('load', () => {
     loadProducts();
     loadProductChart();
 
-    //resetuj session na 30s od refreshu
-    const newExpiresAt = Date.now() + 1000000; //30 sekund odted
+    //resetuj session na 1000s od refreshu
+    const newExpiresAt = Date.now() + 1000000; //1000 sekund odted
     localStorage.setItem('sessionExpiresAt', newExpiresAt);
-    startSessionTimer(30);
+    startSessionTimer(1000);
   } else {
     localStorage.removeItem('sessionExpiresAt');
   }
