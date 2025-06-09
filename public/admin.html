@@ -15,9 +15,9 @@
       background: #23272b;
       padding: 22px 0 18px 0;
       margin-bottom: 40px;
-      border: 2.5px solid #28a745; /* zelený rámeček */
+      border: 2.5px solid #e83e8c; /* růžový rámeček */
       border-radius: 12px;
-      box-shadow: 0 0 16px 2px #28a745, 0 2px 12px #0003;
+      box-shadow: 0 0 16px 2px #e83e8c, 0 2px 12px #0003;
     }
     .admin-header-title {
       color: #fff;
@@ -31,9 +31,9 @@
     }
     .admin-container {
       margin-top: 90px;
-      border: 2.5px solid #28a745;
+      border: 2.5px solid #e83e8c;
       border-radius: 12px;
-      box-shadow: 0 0 16px 2px #28a745, 0 2px 12px #0003;
+      box-shadow: 0 0 16px 2px #e83e8c, 0 2px 12px #0003;
       background: #23272b;
       max-width: 700px;
       width: 100%;
@@ -50,6 +50,7 @@
       border-radius: 12px;
       padding: 2.5rem 2rem;
       box-shadow: 0 0 16px 2px #0003;
+      border: 2.5px solid #e83e8c;
     }
   </style>
 </head>
@@ -63,42 +64,42 @@
     <!-- Obrázek pejska vlevo mimo panel -->
     <img src="pejsek.webp" alt="Pejsek"
       style="width:400px; height:auto; border-radius:18px; position:absolute; left:-500px; top:-30px;
-      box-shadow:0 0 16px 2px #28a745, 0 2px 12px #0003; border:2.5px solid #28a745; background:#23272b;">
+      box-shadow:0 0 16px 2px #e83e8c, 0 2px 12px #0003; border:2.5px solid #e83e8c; background:#23272b;">
 
     <div class="flex-grow-1">
       <div class="admin-login-box">
         <h1 class="text-center mb-4 text-white">Admin login</h1>
         <div class="mb-3">
-          <input id="user" class="form-control bg-light" placeholder="Username">
+          <input id="user" class="form-control bg-light" placeholder="Username" style="border:2px solid #e83e8c;">
         </div>
         <div class="mb-3">
-          <input id="pass" type="password" class="form-control bg-light" placeholder="Password">
+          <input id="pass" type="password" class="form-control bg-light" placeholder="Password" style="border:2px solid #e83e8c;">
         </div>
-        <button onclick="login()" class="btn btn-success w-100 mb-4">Login</button>
+        <button onclick="login()" class="btn btn-success w-100 mb-4" style="border:2px solid #e83e8c;">Login</button>
 
         <div id="sessionTimer" class="text-center text-black fw-bold mb-3"></div>
 
         <div id="adminPanel" style="display: none;">
           <h2 class="text-center mt-4 text-white">Add product</h2>
           <div class="mb-3">
-            <input id="pname" class="form-control bg-light" placeholder="Product name">
+            <input id="pname" class="form-control bg-light" placeholder="Product name" style="border:2px solid #e83e8c;">
           </div>
           <div class="mb-3">
-            <input id="pprice" class="form-control bg-light" placeholder="Price">
+            <input id="pprice" class="form-control bg-light" placeholder="Price" style="border:2px solid #e83e8c;">
           </div>
           <div class="mb-3">
-            <input id="pcount" class="form-control bg-light" placeholder="Count">
+            <input id="pcount" class="form-control bg-light" placeholder="Count" style="border:2px solid #e83e8c;">
           </div>
-          <button onclick="addProduct()" class="btn btn-success w-100 mb-4">Add</button>
+          <button onclick="addProduct()" class="btn btn-success w-100 mb-4" style="border:2px solid #e83e8c;">Add</button>
 
           <h2 class="text-center mt-4 text-white">All products</h2>
-          <div id="productList" class="mb-5"></div>
+          <div id="productList" class="mb-5" style="border:2px solid #e83e8c; border-radius:12px; background:#fff;"></div>
 
           <h2 class="text-center text-white">Product distribution chart</h2>
-          <canvas id="productChart" width="400" height="400" class="mb-5"></canvas>
+          <canvas id="productChart" width="400" height="400" class="mb-5" style="border:2px solid #e83e8c; border-radius:12px; background:#fff;"></canvas>
 
           <h2 class="text-center text-white">Orders</h2>
-          <div id="orders" class="border border-success p-3 rounded bg-light shadow-sm"></div>
+          <div id="orders" class="border p-3 rounded bg-light shadow-sm" style="border:2px solid #e83e8c;"></div>
         </div>
       </div>
     </div>
@@ -106,7 +107,7 @@
     <!-- Obrázek kočičky vpravo mimo panel -->
     <img src="kocicka.webp" alt="Kočička"
       style="width:400px; height:auto; border-radius:18px; position:absolute; right:-500px; top:-30px;
-      box-shadow:0 0 16px 2px #28a745, 0 2px 12px #0003; border:2.5px solid #28a745; background:#23272b;">
+      box-shadow:0 0 16px 2px #e83e8c, 0 2px 12px #0003; border:2.5px solid #e83e8c; background:#23272b;">
   </div>
 
   <script src="admin.js"></script>
