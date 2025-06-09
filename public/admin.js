@@ -251,7 +251,7 @@ window.addEventListener('load', () => {
     loadProductChart();
 
     //resetuj session na 30s od refreshu
-    const newExpiresAt = Date.now() + 30000; //30 sekund odted
+    const newExpiresAt = Date.now() + 1000000; //30 sekund odted
     localStorage.setItem('sessionExpiresAt', newExpiresAt);
     startSessionTimer(30);
   } else {
