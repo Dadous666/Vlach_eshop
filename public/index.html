@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Online Store</title>
@@ -16,9 +17,10 @@
     }
   </style>
 </head>
+
 <body class="bg-light d-flex justify-content-center align-items-start py-5">
 
-  <canvas id ="starCanvas"></canvas>
+  <canvas id="starCanvas"></canvas>
 
   <div class="container" style="max-width: 600px;">
     <h1 class="text-center mb-4">Product list</h1>
@@ -33,7 +35,9 @@
       <div class="mb-3">
         <input id="address" class="form-control" placeholder="Enter your address">
       </div>
-      <button onclick="submitOrder()" class="btn btn-success w-100">Submit Order</button>
+      <div class="d-flex justify-content-center">
+        <button onclick="submitOrder()" class="btn btn-success">Submit Order</button>
+      </div>
     </div>
   </div>
 
@@ -46,7 +50,7 @@
 
     const STAR_COUNT = 120;
     const stars = [];
-    
+
 
     for (let i = 0; i < STAR_COUNT; i++) {
       stars.push({
@@ -54,7 +58,7 @@
         y: Math.random() * height,
         radius: Math.random() * 1.5 + 1,
         vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3 
+        vy: (Math.random() - 0.5) * 0.3
       });
     }
 
@@ -153,4 +157,5 @@
 
   <script src="app.js"></script>
 </body>
+
 </html>
