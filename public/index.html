@@ -70,21 +70,27 @@
   <div style="height: 100px;"></div>
   <!-- Rezerva pod headerem -->
 
-  <div class="container" style="max-width: 700px; margin-top: 90px;">
-    <h1 class="text-center mb-4" style="margin-top: 20px;">Product list</h1>
-    <div id="products" class="mb-4 border border-success p-3 rounded bg-light shadow-sm"></div>
+  <div class="container d-flex align-items-center" style="max-width: 700px; margin-top: 90px;">
+    <img src="dog-food.jpg" alt="Pes s miskou" style="width:90px; height:auto; border-radius:12px; margin-right:18px;">
+    <div class="flex-grow-1">
+      <h1 class="text-center mb-4" style="margin-top: 15px;">Product list</h1>
+      <div id="products" class="mb-4 border border-success p-3 rounded bg-light shadow-sm"></div>
 
-    <h2 class="text-center mt-4">Cart</h2>
-    <div id="cart" class="mb-3 border border-success p-3 rounded bg-light shadow-sm"></div>
-
-    <button onclick="checkout()" class="btn btn-success w-100 mb-4">Order</button>
-
-    <div id="addressForm" style="display:none;">
-      <div class="mb-3">
-        <input id="address" class="form-control bg-light" placeholder="Enter your address">
+      <div class="d-flex align-items-center">
+        <h2 class="text-center mt-4 flex-grow-1">Cart</h2>
+        <img src="cat-food.jpg" alt="Kočka s miskou" style="width:70px; height:auto; border-radius:12px; margin-left:18px;">
       </div>
-      <div class="d-flex justify-content-center">
-        <button onclick="submitOrder()" class="btn btn-success">Submit Order</button>
+      <div id="cart" class="mb-3 border border-success p-3 rounded bg-light shadow-sm"></div>
+
+      <button onclick="checkout()" class="btn btn-success w-100 mb-4">Order</button>
+
+      <div id="addressForm" style="display:none;">
+        <div class="mb-3">
+          <input id="address" class="form-control bg-light" placeholder="Enter your address">
+        </div>
+        <div class="d-flex justify-content-center">
+          <button onclick="submitOrder()" class="btn btn-success">Submit Order</button>
+        </div>
       </div>
     </div>
   </div>
