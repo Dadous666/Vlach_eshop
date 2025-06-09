@@ -59,42 +59,54 @@
     <h1 class="admin-header-title">Pet Food Store</h1>
   </div>
 
-  <div class="admin-container">
-    <div class="admin-login-box">
-      <h1 class="text-center mb-4 text-white">Admin login</h1>
-      <div class="mb-3">
-        <input id="user" class="form-control bg-light" placeholder="Username">
-      </div>
-      <div class="mb-3">
-        <input id="pass" type="password" class="form-control bg-light" placeholder="Password">
-      </div>
-      <button onclick="login()" class="btn btn-success w-100 mb-4">Login</button>
+  <div class="admin-container d-flex align-items-center justify-content-center position-relative" style="max-width: 700px; margin-top: 90px;">
+    <!-- Obrázek pejska vlevo mimo panel -->
+    <img src="pejsek.webp" alt="Pejsek"
+      style="width:400px; height:auto; border-radius:18px; position:absolute; left:-500px; top:-30px;
+      box-shadow:0 0 16px 2px #28a745, 0 2px 12px #0003; border:2.5px solid #28a745; background:#23272b;">
 
-      <div id="sessionTimer" class="text-center text-black fw-bold mb-3"></div>
-
-      <div id="adminPanel" style="display: none;">
-        <h2 class="text-center mt-4 text-white">Add product</h2>
+    <div class="flex-grow-1">
+      <div class="admin-login-box">
+        <h1 class="text-center mb-4 text-white">Admin login</h1>
         <div class="mb-3">
-          <input id="pname" class="form-control bg-light" placeholder="Product name">
+          <input id="user" class="form-control bg-light" placeholder="Username">
         </div>
         <div class="mb-3">
-          <input id="pprice" class="form-control bg-light" placeholder="Price">
+          <input id="pass" type="password" class="form-control bg-light" placeholder="Password">
         </div>
-        <div class="mb-3">
-          <input id="pcount" class="form-control bg-light" placeholder="Count">
+        <button onclick="login()" class="btn btn-success w-100 mb-4">Login</button>
+
+        <div id="sessionTimer" class="text-center text-black fw-bold mb-3"></div>
+
+        <div id="adminPanel" style="display: none;">
+          <h2 class="text-center mt-4 text-white">Add product</h2>
+          <div class="mb-3">
+            <input id="pname" class="form-control bg-light" placeholder="Product name">
+          </div>
+          <div class="mb-3">
+            <input id="pprice" class="form-control bg-light" placeholder="Price">
+          </div>
+          <div class="mb-3">
+            <input id="pcount" class="form-control bg-light" placeholder="Count">
+          </div>
+          <button onclick="addProduct()" class="btn btn-success w-100 mb-4">Add</button>
+
+          <h2 class="text-center mt-4 text-white">All products</h2>
+          <div id="productList" class="mb-5"></div>
+
+          <h2 class="text-center text-white">Product distribution chart</h2>
+          <canvas id="productChart" width="400" height="400" class="mb-5"></canvas>
+
+          <h2 class="text-center text-white">Orders</h2>
+          <div id="orders" class="border border-success p-3 rounded bg-light shadow-sm"></div>
         </div>
-        <button onclick="addProduct()" class="btn btn-success w-100 mb-4">Add</button>
-
-        <h2 class="text-center mt-4 text-white">All products</h2>
-        <div id="productList" class="mb-5"></div>
-
-        <h2 class="text-center text-white">Product distribution chart</h2>
-        <canvas id="productChart" width="400" height="400" class="mb-5"></canvas>
-
-        <h2 class="text-center text-white">Orders</h2>
-        <div id="orders" class="border border-success p-3 rounded bg-light shadow-sm"></div>
       </div>
     </div>
+
+    <!-- Obrázek kočičky vpravo mimo panel -->
+    <img src="kocicka.webp" alt="Kočička"
+      style="width:400px; height:auto; border-radius:18px; position:absolute; right:-500px; top:-30px;
+      box-shadow:0 0 16px 2px #28a745, 0 2px 12px #0003; border:2.5px solid #28a745; background:#23272b;">
   </div>
 
   <script src="admin.js"></script>
