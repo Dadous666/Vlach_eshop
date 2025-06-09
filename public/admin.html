@@ -9,38 +9,40 @@
 <body class="d-flex justify-content-center align-items-start py-5" style="background-color: #00122b;">
 
   <div class="container" style="max-width: 700px;">
-    <h1 class="text-center mb-4">Admin login</h1>
-    <div class="mb-3">
-      <input id="user" class="form-control" placeholder="Username">
-    </div>
-    <div class="mb-3">
-      <input id="pass" type="password" class="form-control" placeholder="Password">
-    </div>
-    <button onclick="login()" class="btn btn-primary w-100 mb-4">Login</button>
-
-    <div id="sessionTimer" class="text-center text-black fw-bold mb-3"></div>
-
-    <div id="adminPanel" style="display: none;">
-      <h2 class="text-center mt-4">Add product</h2>
+    <div class="border border-success rounded p-4 shadow-lg bg-dark bg-opacity-90">
+      <h1 class="text-center mb-4 text-white">Admin login</h1>
       <div class="mb-3">
-        <input id="pname" class="form-control" placeholder="Product name">
+        <input id="user" class="form-control bg-light" placeholder="Username">
       </div>
       <div class="mb-3">
-        <input id="pprice" class="form-control" placeholder="Price">
+        <input id="pass" type="password" class="form-control bg-light" placeholder="Password">
       </div>
-      <div class="mb-3">
-        <input id="pcount" class="form-control" placeholder="Count">
+      <button onclick="login()" class="btn btn-success w-100 mb-4">Login</button>
+
+      <div id="sessionTimer" class="text-center text-black fw-bold mb-3"></div>
+
+      <div id="adminPanel" style="display: none;">
+        <h2 class="text-center mt-4 text-white">Add product</h2>
+        <div class="mb-3">
+          <input id="pname" class="form-control bg-light" placeholder="Product name">
+        </div>
+        <div class="mb-3">
+          <input id="pprice" class="form-control bg-light" placeholder="Price">
+        </div>
+        <div class="mb-3">
+          <input id="pcount" class="form-control bg-light" placeholder="Count">
+        </div>
+        <button onclick="addProduct()" class="btn btn-success w-100 mb-4">Add</button>
+
+        <h2 class="text-center mt-4 text-white">All products</h2>
+        <div id="productList" class="mb-5"></div>
+
+        <h2 class="text-center text-white">Product distribution chart</h2>
+        <canvas id="productChart" width="400" height="400" class="mb-5"></canvas>
+
+        <h2 class="text-center text-white">Orders</h2>
+        <div id="orders" class="border border-success p-3 rounded bg-light shadow-sm"></div>
       </div>
-      <button onclick="addProduct()" class="btn btn-success w-100 mb-4">Add</button>
-
-      <h2 class="text-center mt-4">All products</h2>
-      <div id="productList" class="mb-5"></div>
-
-      <h2 class="text-center">Product distribution chart</h2>
-      <canvas id="productChart" width="400" height="400" class="mb-5"></canvas>
-
-      <h2 class="text-center">Orders</h2>
-      <div id="orders" class="border p-3 rounded bg-white shadow-sm"></div>
     </div>
   </div>
 
